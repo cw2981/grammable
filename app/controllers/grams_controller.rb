@@ -1,6 +1,16 @@
 class GramsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   
+  def destroy
+    @gram = Gram.find_by_id(params[:id])
+    return render_not_found if @gram.blank?
+    @gram.destroy
+    redirect_to root_path
+  end
+
+    
+
+
   def update
     @gram = Gram.find_by_id(params[:id])
     return render_not_found if @gram.blank?
@@ -21,7 +31,7 @@ class GramsController < ApplicationController
   def index
   end
   
-def show
+  def show
     @gram = Gram.find_by_id(params[:id])
     return render_not_found if @gram.blank?
   end
