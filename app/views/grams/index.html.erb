@@ -23,10 +23,11 @@
         <% gram.comments.each do |comment| %>
         <div class="comment">
           <span class="comment_handle">
-            <%= comment.user.email %>
+          <%= comment.user.email %>
           </span>
-
-          <%= comment.message %>
+          <span class="comment-message">
+          <b><%= comment.message %></b>
+          </span>
         </div>
       <% end %>
       <h4>Add a comment</h4>

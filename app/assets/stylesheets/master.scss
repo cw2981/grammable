@@ -91,6 +91,14 @@ input {
  .form-check-label {
   margin-left: 10px;
  }
+ .comment-message:before {
+  content: ":";
+  padding-right: 5px;
+ }
+ .comment:hover {
+  transform: rotate(180deg);
+  color: purple;
+ }
 /*font body font-family: 'Livvic', sans-serif;
 font brand font-family: 'Open Sans', sans-serif;*/
 
